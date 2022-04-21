@@ -1,11 +1,13 @@
-function Test() {
-    this.name = '하북';
+var name = "하재명";
 
-}
+const DongJeaMyung = {
+  name: "동재명이",
+  bark() {
+    console.log(this.name);
+  },
+};
 
-console.dir(Test)
-
-const obj = new Test();
-console.dir(obj);
-
-console.dir(Test.prototype)
+console.log(name);
+console.log(window.name);
+console.log(DongJeaMyung.name);
+console.log(DongJeaMyung.bark());
