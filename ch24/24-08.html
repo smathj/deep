@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <meta charset="utf-8">
+</header>
+<body>
+<script>
+  function foo() {
+    const x = 1; // 자유 변수 (클로저가 찾을수있는거, 자유 변수에 닫혀잇다, 클로저로 자유변수에 접근할수있다)
+    const y = 2;
+
+    // 클로저
+    // 중첩 함수 bar는 외부 함수보다 더 오래 유지되며 상위 스코프의 식별자를 참조한다
+    function bar() {
+      debugger;
+      console.log(x);
+    }
+    return bar;
+  }
+
+  const bar = foo();
+  bar();
+
+</script>
+</body>
+</html>
