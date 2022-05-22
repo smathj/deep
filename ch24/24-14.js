@@ -6,6 +6,7 @@
 function makeCounter(predicate) {
   let counter = 0;
 
+  // [[Environment]] 으로 makeCounter 렉시컬환경 참조
   return function () {
     counter = predicate(counter);
     return counter;

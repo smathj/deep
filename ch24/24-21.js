@@ -1,0 +1,15 @@
+// 자주 발생하는 실수
+// let을 안쓴다면...
+var funcs = [];
+
+for (var i = 0; i < 3; i++) {
+  funcs[i] = (function (id) {
+    return function () {
+      return id;
+    };
+  })(i);
+}
+
+for (var j = 0; j < funcs.length; j++) {
+  console.log(funcs[j]());
+}
